@@ -1,0 +1,25 @@
+{
+    "name": "tshio/babelsheet",
+    "type": "library",
+    "require": {
+        "php": "^7.3",
+        "illuminate/support": "^7.0@dev",
+        "guzzlehttp/guzzle": "^7.0@dev",
+        "phpunit/phpunit": "^9.0@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tsh\\Babelsheet\\Providers\\TranslationsDataFetcher",
+                "Tsh\\Babelsheet\\Providers\\DataSaver",
+                "Tsh\\Babelsheet\\Providers\\BabelsheetServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Tsh\\Babelsheet\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
