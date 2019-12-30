@@ -8,8 +8,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Tsh\\Babelsheet\\Providers\\TranslationsDataFetcher",
-                "Tsh\\Babelsheet\\Providers\\DataSaver",
+                "Tsh\\Babelsheet\\Providers\\TranslationDataFetcherServiceProvider",
+                "Tsh\\Babelsheet\\Providers\\DataSaverServiceProvider",
                 "Tsh\\Babelsheet\\Providers\\BabelsheetServiceProvider"
             ]
         }
