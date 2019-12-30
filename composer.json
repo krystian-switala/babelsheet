@@ -2,8 +2,6 @@
     "name": "tshio/babelsheet",
     "type": "library",
     "require": {
-        "php": "^7.3",
-        "illuminate/support": "^7.0@dev",
         "guzzlehttp/guzzle": "^7.0@dev",
         "phpunit/phpunit": ">=8.0"
     },
