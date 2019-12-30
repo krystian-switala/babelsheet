@@ -8,7 +8,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Tsh\\Babelsheet\\Providers\\TranslationFromApiFetcherServiceProvider.php",
+                "Tsh\\Babelsheet\\Providers\\TranslationFromApiFetcherServiceProvider",
                 "Tsh\\Babelsheet\\Providers\\DataIntoFileSaverServiceProvider",
                 "Tsh\\Babelsheet\\Providers\\TranslationDataFetcherServiceProvider",
                 "Tsh\\Babelsheet\\Providers\\DataSaverServiceProvider",
