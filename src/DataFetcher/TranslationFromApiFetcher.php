@@ -9,14 +9,14 @@ use Tsh\Babelsheet\Exceptions\WrongFormatOfFetchedDataException;
 
 class TranslationFromApiFetcher implements TranslationsDataFetcher
 {
-    private const API_URL = 'http://localhost:3000/translations';
-
     private $client;
     private $depth = 512;
+    private $apiUrl;
 
-    public function __construct(Client $client)
+    public function __construct(Client $client, ?string $apiUrl)
     {
         $this->client = $client;
+        $this->apiUrl = $apiUrl;
     }
 
     public function fetchTranslation(): array
