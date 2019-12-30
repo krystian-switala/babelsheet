@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Config;
 
 class TranslationDataFetcherServiceProvider extends ServiceProvider
 {
+    private const CONCRETE_CLASS_KEY = 'babelsheet.dataFetcherClass';
+
     public function register(): void
     {
-        $concreteClass = Config::get('babelsheet.dataFetcherClass');
+        $concreteClass = Config::get(self::CONCRETE_CLASS_KEY);
         $this->app->bind(TranslationsDataFetcher::class, function (Application $app) use ($concreteClass) {
             return $app->make($concreteClass);
         });

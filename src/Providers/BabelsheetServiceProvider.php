@@ -13,6 +13,7 @@ use Tsh\Babelsheet\DataSaver\DataSaver;
 class BabelsheetServiceProvider extends ServiceProvider
 {
     private const PATH_TO_CONFIG_FILE = __DIR__ . '/../../config/config.php';
+    private const CONFIG_FILE_NAME = 'babelsheet.php';
 
     public function register(): void
     {
@@ -27,7 +28,7 @@ class BabelsheetServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            self::PATH_TO_CONFIG_FILE => config_path('babelsheet.php'),
+            self::PATH_TO_CONFIG_FILE => config_path(self::CONFIG_FILE_NAME),
         ]);
     }
 }

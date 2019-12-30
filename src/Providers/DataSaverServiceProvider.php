@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Config;
 
 class DataSaverServiceProvider extends ServiceProvider
 {
+    private const CONCRETE_CLASS_KEY = 'babelsheet.dataSaverClass';
+
     public function register(): void
     {
-        $concreteClass = Config::get('babelsheet.dataSaverClass');
+        $concreteClass = Config::get(self::CONCRETE_CLASS_KEY);
         $this->app->bind(DataSaver::class, function (Application $app) use ($concreteClass) {
             return $app->make($concreteClass);
         });
